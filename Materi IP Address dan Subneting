@@ -1,0 +1,186 @@
+### Modul Ajar IP Address untuk Kelas 11 TKJ
+
+#### **Pendahuluan**
+- **Tujuan Pembelajaran**:
+  - Memahami konsep dasar IP Address.
+  - Menjelaskan perbedaan antara IPv4 dan IPv6.
+  - Mampu mengkonfigurasi IP Address pada perangkat jaringan.
+  - Memahami subnetting dan mengaplikasikannya.
+  - Mengidentifikasi masalah yang berkaitan dengan IP Address dan menyelesaikannya.
+
+#### **Bab 1: Pengertian dan Fungsi IP Address**
+- **Definisi IP Address**:
+  - IP Address (Internet Protocol Address) adalah alamat unik yang diberikan kepada setiap perangkat yang terhubung ke jaringan internet.
+  - Fungsi utama IP Address adalah sebagai pengenal identitas perangkat dan untuk memungkinkan komunikasi antar perangkat dalam jaringan.
+
+- **Jenis-jenis IP Address**:
+  - **IPv4**: 32-bit address yang terdiri dari empat kelompok angka yang dipisahkan oleh titik (contoh: 192.168.1.1).
+  - **IPv6**: 128-bit address yang terdiri dari delapan kelompok angka heksadesimal yang dipisahkan oleh titik dua (contoh: 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+#### **Bab 2: Struktur dan Kelas IP Address**
+- **Struktur IPv4**:
+  - Terdiri dari empat oktet, masing-masing terdiri dari 8 bit.
+  - Pembagian kelas:
+    - **Kelas A**: 0.0.0.0 hingga 127.255.255.255 (untuk jaringan besar).
+    - **Kelas B**: 128.0.0.0 hingga 191.255.255.255 (untuk jaringan menengah).
+    - **Kelas C**: 192.0.0.0 hingga 223.255.255.255 (untuk jaringan kecil).
+    - **Kelas D**: 224.0.0.0 hingga 239.255.255.255 (untuk multicast).
+    - **Kelas E**: 240.0.0.0 hingga 255.255.255.255 (untuk eksperimental).
+
+- **Struktur IPv6**:
+  - Terdiri dari delapan blok 16-bit yang dipisahkan oleh titik dua.
+  - Contoh: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+  - Penyederhanaan penulisan:
+    - Menggunakan tanda :: untuk menggantikan rangkaian nol berturut-turut.
+
+#### **Bab 3: Pengaturan dan Konfigurasi IP Address**
+- **Penugasan IP Address**:
+  - **Statis**: IP Address yang diatur secara manual oleh pengguna.
+  - **Dinamis**: IP Address yang diberikan oleh server DHCP (Dynamic Host Configuration Protocol).
+
+- **Langkah-langkah konfigurasi IP Address di Windows**:
+  1. Buka 'Network and Sharing Center'.
+  2. Klik 'Change adapter settings'.
+  3. Klik kanan pada koneksi yang ingin dikonfigurasi dan pilih 'Properties'.
+  4. Pilih 'Internet Protocol Version 4 (TCP/IPv4)' dan klik 'Properties'.
+  5. Pilih 'Use the following IP address' dan masukkan IP Address, Subnet Mask, dan Default Gateway.
+
+#### **Bab 4: Subnetting**
+- **Pengertian Subnetting**:
+  - Subnetting adalah proses membagi satu jaringan IP menjadi beberapa subnet yang lebih kecil.
+  - Tujuannya adalah untuk mengoptimalkan penggunaan IP Address dan mengurangi lalu lintas jaringan.
+
+- **Keuntungan Subnetting**:
+  - Mengurangi lalu lintas jaringan dan meminimalkan kemacetan.
+  - Meningkatkan keamanan jaringan dengan segmentasi.
+  - Mempermudah manajemen jaringan.
+
+- **Cara Subnetting**:
+  - Menentukan jumlah subnet dan host yang dibutuhkan.
+  - Menghitung jumlah bit yang diperlukan untuk subnet mask.
+  - Menghitung rentang IP Address untuk setiap subnet.
+
+- **Notasi CIDR (Classless Inter-Domain Routing)**:
+  - CIDR digunakan untuk menuliskan subnet mask dalam bentuk singkat, misalnya /24 untuk 255.255.255.0.
+  - **Perhitungan CIDR**:
+    - Jumlah bit untuk network: /24 berarti 24 bit untuk network dan sisanya untuk host.
+    - Subnet mask: 11111111.11111111.11111111.00000000 (255.255.255.0).
+
+- **Menghitung Subnet**:
+  - **Network Address**: Alamat pertama dalam subnet (semua bit host diatur ke 0).
+  - **Broadcast Address**: Alamat terakhir dalam subnet (semua bit host diatur ke 1).
+  - **Host Range**: Rentang alamat yang dapat digunakan oleh host dalam subnet (alamat network hingga broadcast dikurangi dua untuk network dan broadcast address).
+
+- **Contoh Subnetting IPv4**:
+  - Diberikan IP Address 192.168.1.0/24 dan ingin membuat 4 subnet.
+  - Jumlah bit tambahan yang diperlukan: 2 bit (karena 2^2 = 4).
+  - Subnet mask baru: /26 (255.255.255.192).
+  - Subnet pertama:
+    - Network Address: 192.168.1.0
+    - Broadcast Address: 192.168.1.63
+    - Host Range: 192.168.1.1 - 192.168.1.62
+
+#### **Bab 5: VLSM (Variable Length Subnet Masking)**
+- **Pengertian VLSM**:
+  - VLSM adalah teknik subnetting yang memungkinkan penggunaan lebih efisien dari IP Address dengan membuat subnet dari berbagai ukuran sesuai kebutuhan.
+  - VLSM memungkinkan penggunaan subnet mask yang berbeda dalam satu jaringan IP Address.
+
+- **Keuntungan VLSM**:
+  - Mengoptimalkan penggunaan alamat IP.
+  - Memungkinkan jaringan yang lebih fleksibel dan efisien.
+  - Mengurangi pemborosan alamat IP yang tidak terpakai.
+
+- **Langkah-langkah VLSM**:
+  1. Tentukan jumlah subnet dan host yang dibutuhkan untuk setiap subnet.
+  2. Mulai dengan subnet terbesar dan berikan alamat yang diperlukan.
+  3. Lanjutkan ke subnet berikutnya dengan sisa alamat IP.
+  4. Teruskan proses ini sampai semua subnet mendapatkan alamat yang diperlukan.
+
+- **Contoh Penerapan VLSM**:
+  - Diberikan IP Address 192.168.10.0/24, dan membutuhkan 3 subnet dengan kebutuhan berikut:
+    - Subnet A: 100 host.
+    - Subnet B: 50 host.
+    - Subnet C: 25 host.
+  - **Langkah-langkah**:
+    1. Subnet A:
+       - Membutuhkan 128 alamat (2^7 = 128), subnet mask /25.
+       - Network Address: 192.168.10.0
+       - Broadcast Address: 192.168.10.127
+       - Host Range: 192.168.10.1 - 192.168.10.126
+    2. Subnet B:
+       - Membutuhkan 64 alamat (2^6 = 64), subnet mask /26.
+       - Network Address: 192.168.10.128
+       - Broadcast Address: 192.168.10.191
+       - Host Range: 192.168.10.129 - 192.168.10.190
+    3. Subnet C:
+       - Membutuhkan 32 alamat (2^5 = 32), subnet mask /27.
+       - Network Address: 192.168.10.192
+       - Broadcast Address: 192.168.10.223
+       - Host Range: 192.168.10.193 - 192.168.10.222
+
+#### **Bab 6: Troubleshooting IP Address**
+- **Masalah umum**:
+  - Konflik IP Address: Terjadi ketika dua perangkat memiliki IP Address yang sama.
+  - IP Address tidak valid: Konfigurasi IP Address yang salah atau tidak sesuai dengan jaringan.
+  - Masalah konektivitas: Tidak bisa terhubung ke jaringan atau internet.
+
+- **Langkah-langkah troubleshooting**:
+  - **Penggunaan perintah dasar**:
+    - `ping`: Untuk memeriksa konektivitas.
+    - `ipconfig`: Untuk melihat konfigurasi IP Address di Windows.
+  - **Diagnosa masalah jaringan**:
+    1. Periksa konfigurasi IP Address pada perangkat.
+    2. Reset jaringan dan perangkat.
+    3. Gunakan perintah `tracert` untuk melacak rute paket.
+
+#### **Bab 7: Praktikum Konfigurasi IP Address di Windows**
+- **Praktikum 1: Konfigurasi IP Address Statis di Windows**:
+  - Langkah-langkah:
+    1. Buka 'Network and Sharing Center'.
+    2. Klik 'Change adapter settings'.
+    3. Klik kanan pada koneksi yang ingin dikonfigurasi dan pilih 'Properties'.
+    4. Pilih 'Internet Protocol Version 4 (TCP/IPv4)' dan klik 'Properties'.
+    5. Pilih 'Use the following IP address' dan masukkan IP Address, Subnet Mask, dan Default Gateway.
+
+#### **Latihan Soal Cer
+
+ita Esai**
+
+1. **Soal Cerita Esai 1**:
+   - Andi adalah seorang teknisi jaringan yang sedang mengkonfigurasi jaringan di sebuah kantor. Kantor tersebut memiliki jaringan dengan IP Address 192.168.1.0/24. Andi diminta untuk membuat 2 subnet, masing-masing untuk departemen IT dan departemen HR. Bagaimana Andi akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk kedua subnet tersebut?
+
+2. **Soal Cerita Esai 2**:
+   - Budi bekerja di sebuah sekolah yang menggunakan jaringan dengan IP Address 10.0.0.0/16. Sekolah tersebut ingin membagi jaringan menjadi 4 subnet untuk lab komputer, administrasi, perpustakaan, dan ruang kelas. Bagaimana Budi akan membagi jaringan tersebut dan memastikan setiap subnet mendapatkan jumlah IP Address yang sesuai?
+
+3. **Soal Cerita Esai 3**:
+   - Citra adalah seorang administrator jaringan di sebuah perusahaan. Perusahaan tersebut memiliki jaringan dengan IP Address 172.16.0.0/20. Mereka ingin membagi jaringan menjadi 3 subnet untuk produksi, pengembangan, dan administrasi. Citra harus memastikan setiap subnet memiliki jumlah IP Address yang cukup. Bagaimana dia akan melakukan ini?
+
+4. **Soal Cerita Esai 4**:
+   - Dedi bekerja di sebuah rumah sakit yang menggunakan jaringan dengan IP Address 192.168.100.0/24. Rumah sakit ingin membagi jaringan menjadi 5 subnet untuk ICU, rawat inap, administrasi, laboratorium, dan apotek. Bagaimana Dedi akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk setiap subnet?
+
+5. **Soal Cerita Esai 5**:
+   - Eka bekerja di sebuah perusahaan teknologi yang menggunakan jaringan dengan IP Address 10.1.0.0/16. Perusahaan tersebut ingin membagi jaringan menjadi 6 subnet untuk tim pengembangan, tim QA, tim desain, administrasi, pemasaran, dan support. Bagaimana Eka akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk setiap subnet?
+
+#### **Latihan Soal Subnetting**
+
+1. **Soal Subnetting 1**:
+   - Diberikan IP Address 192.168.10.0/24 dan ingin membuat 4 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+2. **Soal Subnetting 2**:
+   - Diberikan IP Address 10.0.0.0/16 dan ingin membuat 8 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+3. **Soal Subnetting 3**:
+   - Diberikan IP Address 172.16.0.0/22 dan ingin membuat 4 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+4. **Soal Subnetting 4**:
+   - Diberikan IP Address 192.168.100.0/24 dan ingin membuat 6 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+5. **Soal Subnetting 6**:
+   - Diberikan IP Address 192.168.1.0/24 dan ingin membuat 3 subnet dengan ukuran yang berbeda: satu subnet untuk 100 host, satu subnet untuk 50 host, dan satu subnet untuk 25 host. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+6. **Soal Subnetting 8**:
+   - Diberikan IP Address 192.168.5.0/24 dan ingin membuat 4 subnet dengan ukuran yang berbeda: satu subnet untuk 60 host, satu subnet untuk 30 host, dan dua subnet masing-masing untuk 15 host. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+
+#### **Penutup**
+- **Evaluasi**: Melalui latihan soal dan praktik langsung, siswa dapat memahami dan mengaplikasikan konsep IP Address dengan baik.
+- **Rangkuman**: Pengertian, jenis-jenis, struktur, pengaturan, subnetting, VLSM, troubleshooting, dan praktikum IP Address.
