@@ -142,45 +142,48 @@
     4. Pilih 'Internet Protocol Version 4 (TCP/IPv4)' dan klik 'Properties'.
     5. Pilih 'Use the following IP address' dan masukkan IP Address, Subnet Mask, dan Default Gateway.
 
-#### **Latihan Soal Cer
+#### **Latihan Soal Cerita
 
-ita Esai**
+### Soal 1:
+Sebuah sekolah memiliki 4 ruangan yang akan dihubungkan ke jaringan. Anda diberikan IP network `192.168.3.0/24`. Setiap ruangan membutuhkan sejumlah IP yang berbeda untuk perangkat komputer mereka:
 
-1. **Soal Cerita Esai 1**:
-   - Andi adalah seorang teknisi jaringan yang sedang mengkonfigurasi jaringan di sebuah kantor. Kantor tersebut memiliki jaringan dengan IP Address 192.168.1.0/24. Andi diminta untuk membuat 2 subnet, masing-masing untuk departemen IT dan departemen HR. Bagaimana Andi akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk kedua subnet tersebut?
+- Ruang 1: 30 komputer
+- Ruang 2: 50 komputer
+- Ruang 3: 14 komputer
+- Ruang 4: 6 komputer
 
-2. **Soal Cerita Esai 2**:
-   - Budi bekerja di sebuah sekolah yang menggunakan jaringan dengan IP Address 10.0.0.0/16. Sekolah tersebut ingin membagi jaringan menjadi 4 subnet untuk lab komputer, administrasi, perpustakaan, dan ruang kelas. Bagaimana Budi akan membagi jaringan tersebut dan memastikan setiap subnet mendapatkan jumlah IP Address yang sesuai?
+Tugas Anda adalah menentukan IP host yang dapat digunakan untuk setiap ruangan beserta subnet mask yang sesuai.
 
-3. **Soal Cerita Esai 3**:
-   - Citra adalah seorang administrator jaringan di sebuah perusahaan. Perusahaan tersebut memiliki jaringan dengan IP Address 172.16.0.0/20. Mereka ingin membagi jaringan menjadi 3 subnet untuk produksi, pengembangan, dan administrasi. Citra harus memastikan setiap subnet memiliki jumlah IP Address yang cukup. Bagaimana dia akan melakukan ini?
+### Soal 2:
+Sebuah instansi pemerintah memiliki 6 ruangan yang membutuhkan jaringan lokal. Anda diberikan IP network `192.168.10.0/24`. Setiap ruangan memiliki jumlah perangkat komputer sebagai berikut:
 
-4. **Soal Cerita Esai 4**:
-   - Dedi bekerja di sebuah rumah sakit yang menggunakan jaringan dengan IP Address 192.168.100.0/24. Rumah sakit ingin membagi jaringan menjadi 5 subnet untuk ICU, rawat inap, administrasi, laboratorium, dan apotek. Bagaimana Dedi akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk setiap subnet?
+- Ruang A: 18 komputer
+- Ruang B: 40 komputer
+- Ruang C: 8 komputer
+- Ruang D: 60 komputer
+- Ruang E: 25 komputer
+- Ruang F: 10 komputer
 
-5. **Soal Cerita Esai 5**:
-   - Eka bekerja di sebuah perusahaan teknologi yang menggunakan jaringan dengan IP Address 10.1.0.0/16. Perusahaan tersebut ingin membagi jaringan menjadi 6 subnet untuk tim pengembangan, tim QA, tim desain, administrasi, pemasaran, dan support. Bagaimana Eka akan membagi jaringan tersebut dan mengkonfigurasi IP Address untuk setiap subnet?
+Tentukan IP host yang bisa digunakan untuk setiap ruangan serta subnet masknya.
 
-#### **Latihan Soal Subnetting**
+### Soal 3:
+Sebuah gedung perkantoran memiliki 8 ruangan yang akan terhubung ke satu jaringan. Anda diberikan IP network `172.16.13.0/24`. Jumlah komputer di setiap ruangan adalah sebagai berikut:
 
-1. **Soal Subnetting 1**:
-   - Diberikan IP Address 192.168.10.0/24 dan ingin membuat 4 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+- Ruang X: 15 komputer
+- Ruang Y: 30 komputer
+- Ruang Z: 6 komputer
+- Ruang W: 50 komputer
+- Ruang V: 20 komputer
+- Ruang U: 14 komputer
+- Ruang T: 35 komputer
+- Ruang S: 8 komputer
 
-2. **Soal Subnetting 2**:
-   - Diberikan IP Address 10.0.0.0/16 dan ingin membuat 8 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+Tentukan IP host yang bisa digunakan untuk setiap ruangan beserta subnet mask yang diperlukan.
 
-3. **Soal Subnetting 3**:
-   - Diberikan IP Address 172.16.0.0/22 dan ingin membuat 4 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+---
 
-4. **Soal Subnetting 4**:
-   - Diberikan IP Address 192.168.100.0/24 dan ingin membuat 6 subnet. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
+### Soal 4:
+Di sebuah ruangan pada sebuah sekolah, terdapat 30 komputer yang membutuhkan alamat IP dari network `192.168.20.0/24`. Anda diminta untuk melakukan subnetting dan menentukan range IP host yang bisa digunakan serta subnet mask yang tepat untuk jaringan tersebut.
 
-5. **Soal Subnetting 6**:
-   - Diberikan IP Address 192.168.1.0/24 dan ingin membuat 3 subnet dengan ukuran yang berbeda: satu subnet untuk 100 host, satu subnet untuk 50 host, dan satu subnet untuk 25 host. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
-
-6. **Soal Subnetting 8**:
-   - Diberikan IP Address 192.168.5.0/24 dan ingin membuat 4 subnet dengan ukuran yang berbeda: satu subnet untuk 60 host, satu subnet untuk 30 host, dan dua subnet masing-masing untuk 15 host. Tentukan subnet mask baru, Network Address, Broadcast Address, dan Host Range untuk setiap subnet.
-
-#### **Penutup**
-- **Evaluasi**: Melalui latihan soal dan praktik langsung, siswa dapat memahami dan mengaplikasikan konsep IP Address dengan baik.
-- **Rangkuman**: Pengertian, jenis-jenis, struktur, pengaturan, subnetting, VLSM, troubleshooting, dan praktikum IP Address.
+### Soal 5:
+Sebuah ruangan kantor memiliki 25 komputer dan membutuhkan alamat IP dari network `192.168.200.0/24`. Anda diminta untuk melakukan subnetting dan menentukan IP host yang dapat digunakan untuk setiap komputer beserta subnet mask yang tepat.
